@@ -1,0 +1,10 @@
+{
+	"name": "Nerves",
+	"dockerFile": "Dockerfile",
+	"extensions": [
+		"jakebecker.elixir-ls"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "bash"
+	}
+}
