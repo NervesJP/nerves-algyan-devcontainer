@@ -1,5 +1,5 @@
 {
-	"name": "Nerves",
+	"name": "NervesJP-ALGYAN",
 	"dockerFile": "Dockerfile",
 	"extensions": [
 		"jakebecker.elixir-ls"
