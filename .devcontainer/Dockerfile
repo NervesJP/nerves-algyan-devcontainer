@@ -41,8 +41,8 @@ RUN mix archive.install hex nerves_bootstrap --force
 
 # Create symbolic link for SSH keys
 RUN mkdir -p ~/.ssh
-RUN ln -s /workspaces/nerves-devcontainer/.ssh/id_rsa ~/.ssh/
-RUN ln -s /workspaces/nerves-devcontainer/.ssh/id_rsa.pub ~/.ssh/
+RUN ln -s /workspaces/nerves-algyan-devcontainer/.ssh/id_rsa ~/.ssh/
+RUN ln -s /workspaces/nerves-algyan-devcontainer/.ssh/id_rsa.pub ~/.ssh/
 
 # Create symbolic link for archives of Nerves artifacts
 RUN ln -s /workspaces/nerves-devcontainer/.nerves ~/.nerves
