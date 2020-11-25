@@ -44,7 +44,9 @@ RUN mkdir -p ~/.ssh
 RUN ln -s /workspaces/nerves-algyan-devcontainer/.ssh/id_rsa ~/.ssh/
 RUN ln -s /workspaces/nerves-algyan-devcontainer/.ssh/id_rsa.pub ~/.ssh/
 
-# Create symbolic link for archives of Nerves artifacts
-RUN ln -s /workspaces/nerves-devcontainer/.nerves ~/.nerves
+# Download archives of Nerves artifacts on Docker build process
+RUN mkdir -p ~/.nerves/dl
+RUN wget -q -P ~/.nerves/dl/ https://github.com/nerves-project/nerves_system_rpi4/releases/download/v1.13.0/nerves_system_rpi4-portable-1.13.0-366303C.tar.gz
+RUN wget -q -P ~/.nerves/dl/ https://github.com/nerves-project/toolchains/releases/download/v1.3.2/nerves_toolchain_arm_unknown_linux_gnueabihf-linux_x86_64-1.3.2-E31F29C.tar.xz
 
 ENTRYPOINT /bin/bash
